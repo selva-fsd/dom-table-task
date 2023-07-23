@@ -1,0 +1,57 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
+
+
+function tablecreate(tagname,attername,attervalue){
+var ele=document.createElement(tagname);
+ele.setAttribute(attername,attervalue);
+return ele;
+
+}
+
+function theadcreate(tagname){
+    var ele=document.createElement(tagname);
+    return ele;
+
+}
+
+function trowcreate(tagname){
+var ele=document.createElement(tagname);
+return ele;
+
+}
+
+function rowhcreate(tagname,attername,attervalue,contant){
+var ele=document.createElement(tagname);
+ele.setAttribute(attername,attervalue);
+ele.innerHTML=contant;
+return ele;
+
+}
+
+var table=tablecreate("table","class","table");
+var head=theadcreate("thead");
+var row=trowcreate("tr");
+var rh1=rowhcreate("th","scope","col","First");
+var rh2=rowhcreate("th","scope","col","last");
+var rh3=rowhcreate("th","scope","col","Handle");
+
+
+row.append(rh1,rh2,rh3);
+head.append(row);
+head.append(table);
+document.body.append(table);
